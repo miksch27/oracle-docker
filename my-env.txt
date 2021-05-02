@@ -1,0 +1,19 @@
+# default value ORCLCDB
+ORACLE_SID=PSTGCDB
+# default value ORCLPDB1
+ORACLE_PDB=PSTGPDB1
+# default value random
+# ORACLE_PWD=Docker#2020
+ORACLE_PWD=HixChr#2099
+# enterprise or standard default enterprise 
+ORACLE_EDITION=enterprise
+# default value AL32UTF8
+ORACLE_CHARACTERSET=AL32UTF8
+#
+ORADATA=/Users/rekins/19c/oradata
+ORASTARTUP=/Users/rekins/19c/startup
+ORASETUP=/Users/rekins/19c/setup
+#
+CON_NAME=my19c
+LISTENER=1521
+OEM=5500

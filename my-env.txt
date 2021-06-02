@@ -1,10 +1,7 @@
 # default value ORCLCDB
-ORACLE_SID=PSTGCDB
 # default value ORCLPDB1
-ORACLE_PDB=PSTGPDB1
 # default value random
-# ORACLE_PWD=Docker#2020
-ORACLE_PWD=HixChr#2099
+ORACL_PWD=PWD2100pwd
 # enterprise or standard default enterprise 
 ORACLE_EDITION=enterprise
 # default value AL32UTF8

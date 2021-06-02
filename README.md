@@ -33,7 +33,7 @@ After this command is finished, doublecheck it via:
 > container-registry.oracle.com/database/enterprise latest 6ee1b2e4403f 5 months ago 7.87GB
 > ...
 
-This command start the container from this new image. It uses my-env.txt in my case
+This command start the container from this new image. It uses my-env.txt in my case. It contains password, sid..
 
 > C:\> docker run -d --env-file my-env.txt --name oracele19ee -p 1521:1521 -p 5500:5500 container-registry.oracle.com/database/enterprise
 > 7c0fe17cfb58119e1afe93e99cecb7b0be4345988ead370734071a3a9f14f5c6
@@ -60,3 +60,13 @@ Following executes and exits sqlplus
 The following pipes DDLs to the new instance
 
 > C:\> docker exec -it oracele19ee sqlplus
+
+> C:\> docker stop oracele19ee  
+> oracele19ee
+> C:\> docker unpause oracele19ee  
+> Error response from daemon: Container f9992f29eefb211baf112a8a62e30fea82ba3b2a82303890c0dbf54717dfc8a5 is not paused
+> C:\> docker start oracele19ee  
+> oracele19ee
+> C:\>
+
+Das ist die letzte Zeile dieser Beschreibung

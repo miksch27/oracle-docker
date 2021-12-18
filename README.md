@@ -66,7 +66,28 @@ The following pipes DDLs to the new instance
 > C:\> docker unpause oracele19ee  
 > Error response from daemon: Container f9992f29eefb211baf112a8a62e30fea82ba3b2a82303890c0dbf54717dfc8a5 is not paused
 > C:\> docker start oracele19ee  
-> oracele19ee
+
 > C:\>
+
+Hier nun die Variante mit XE  12 2021:
+
+https://container-registry.oracle.com/ords/f?p=113:4:185874636565:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:803,803,Oracle%20Database%20Express%20Edition,Oracle%20Database%20Express%20Edition,1,0&cs=3ITV54GHmMvsv-HoE6-l3uz8LWtwPSYfxULHh91UOfudwQbTsYrpL0O0QjIfnCPvDFK8p-CZxFPV0pPu_Wqdxxw
+
+Docker for Desktop muss installiert sein. Alle Updates soweit installiert.
+
+> C:\> docker run -d --name my0815DB container-registry.oracle.com/database/express:latest
+
+Einsehen der logs:
+
+> C:\> docker logs my0815DB
+
+Setzen des Passwords via setPassword.sh:
+
+> C:\>  docker exec my0815DB ./setPassword.sh \"abcdef\" 
+
+> C:\> docker exec -it my0815DB sqlplus sys/abcdef@XE as sysdba
+> C:\> 
+> C:\> 
+> C:\> 
 
 Das ist die letzte Zeile dieser Beschreibung
